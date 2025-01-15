@@ -51,6 +51,7 @@ public class SignDemoController {
         RestTemplate restTemplate = new RestTemplate();
 
         // 参数声明
+        String version = "1";
         String appId = "请填写APPID";
         String secret = "请填写密钥";
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
@@ -77,6 +78,7 @@ public class SignDemoController {
 
         // 请求头参数
         Map<String, String> headers = new HashMap<>();
+        headers.put("version", version);
         headers.put("app-id", appId);
         headers.put("timestamp", timestamp);
         headers.put("signature", signature);
@@ -108,6 +110,7 @@ public class SignDemoController {
         RestTemplate restTemplate = new RestTemplate();
 
         // 参数声明
+        String version = "1";
         String appId = "请填写APPID";
         String secret = "请填写密钥";
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
@@ -136,6 +139,7 @@ public class SignDemoController {
 
         // 请求头参数
         Map<String, String> headers = new HashMap<>();
+        headers.put("version", version);
         headers.put("app-id", appId);
         headers.put("timestamp", timestamp);
         headers.put("signature", signature);
@@ -163,6 +167,7 @@ public class SignDemoController {
         RestTemplate restTemplate = new RestTemplate();
 
         // 参数声明
+        String version = "1";
         String appId = "请填写APPID";
         String secret = "请填写密钥";
         String timestamp = String.valueOf(System.currentTimeMillis() / 1000);
@@ -193,6 +198,7 @@ public class SignDemoController {
 
         // 请求头参数
         Map<String, String> headers = new HashMap<>();
+        headers.put("version", version);
         headers.put("app-id", appId);
         headers.put("timestamp", timestamp);
         headers.put("signature", signature);
