@@ -1,0 +1,18 @@
+[
+  {
+    "id_card_type": "1",
+    "is_verify": "2",
+    "mobile": "17779999999",
+    "register_channel_code": "1",
+    "register_time": "2025-01-08 23:57:05",
+    "status": "1"
+  },
+  {
+    "id_card_type": "1",
+    "is_verify": "2",
+    "mobile": "18889999999",
+    "register_channel_code": "1",
+    "register_time": "2025-01-08 23:56:04",
+    "status": "1"
+  }
+]
