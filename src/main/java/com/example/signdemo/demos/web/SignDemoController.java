@@ -47,6 +47,7 @@ public class SignDemoController {
     @GetMapping("/request/hti-member/get")
     @ResponseBody
     public String RequestHtiMemberGet() {
+        Gson gson = new Gson();
         RestTemplate restTemplate = new RestTemplate();
 
         // 参数声明
@@ -56,12 +57,16 @@ public class SignDemoController {
         String signatureNonce = UUID.randomUUID().toString();
         String signature;
 
+        // get请求参数
+        Map<String, String> params = new HashMap<>();
+        params.put("id", "12312");
+
         // 签名参数
         Map<String, String> signParams = new TreeMap<>();
-        signParams.put("id", appId);
         signParams.put("app-id", appId);
         signParams.put("timestamp", timestamp);
         signParams.put("signature-nonce", signatureNonce);
+        signParams.put("params", gson.toJson(params));
 
         try {
             // 计算签名
@@ -120,7 +125,7 @@ public class SignDemoController {
         signParams.put("app-id", appId);
         signParams.put("timestamp", timestamp);
         signParams.put("signature-nonce", signatureNonce);
-        signParams.putAll(params);
+        signParams.put("params", gson.toJson(params));
 
         try {
             // 计算签名
